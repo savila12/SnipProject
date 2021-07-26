@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */; };
 		01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */; };
-		01DFD9CB26AEFF3C00D905A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9CA26AEFF3C00D905A1 /* ViewController.swift */; };
+		01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */; };
 		01DFD9CE26AEFF3C00D905A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9CC26AEFF3C00D905A1 /* Main.storyboard */; };
 		01DFD9D026AEFF4100D905A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */; };
 		01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		01DFD9C326AEFF3C00D905A1 /* SnipProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01DFD9CA26AEFF3C00D905A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		01DFD9CD26AEFF3C00D905A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01DFD9D226AEFF4100D905A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +99,7 @@
 		01DFD9C526AEFF3C00D905A1 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
+				01DFD9FC26AF036B00D905A1 /* APIManager */,
 				01DFD9F926AF010B00D905A1 /* SupportedFiles */,
 				01DFD9F826AF00FC00D905A1 /* Views */,
 				01DFD9F726AF00F300D905A1 /* ViewModels */,
@@ -152,7 +153,6 @@
 		01DFD9F926AF010B00D905A1 /* SupportedFiles */ = {
 			isa = PBXGroup;
 			children = (
-				01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */,
 				01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */,
 				01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */,
 				01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */,
@@ -163,7 +163,7 @@
 		01DFD9FA26AF013800D905A1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				01DFD9CA26AEFF3C00D905A1 /* ViewController.swift */,
+				01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,8 +172,16 @@
 			isa = PBXGroup;
 			children = (
 				01DFD9CC26AEFF3C00D905A1 /* Main.storyboard */,
+				01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		01DFD9FC26AF036B00D905A1 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DFD9CB26AEFF3C00D905A1 /* ViewController.swift in Sources */,
+				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
 				01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */,
 			);
