@@ -9,7 +9,7 @@ import UIKit
 
 class LoginSignupViewController: UIViewController {
     
-    let imgView = UIImageView()
+    let imgView = UIImageView.init()
     let snipLabel = UILabel()
     let designLabel = UILabel()
     let signupBtn = UIButton()
@@ -18,13 +18,15 @@ class LoginSignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        view.backgroundColor = #colorLiteral(red: 0.9764325023, green: 0.9686483741, blue: 0.9970936179, alpha: 1)
+        setUpimgView()
     }
     
     func setUpimgView(){
+        view.addSubview(imgView)
         let imageName = "SnipLogo"
         imgView.image = UIImage(named: imageName)
-        imgView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 200, left: 100, bottom: 0, right: 100))
+        imgView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 200, left: 150, bottom: 0, right: -150))
     }
 
 
