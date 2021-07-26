@@ -22,6 +22,8 @@ class LoginSignupViewController: UIViewController {
         setUpimgView()
         setUpSnipLabel()
         setUpDesignLabel()
+        setUpLoginBtn()
+        setUpSignupBtn()
     }
     
     func setUpimgView(){
@@ -43,8 +45,20 @@ class LoginSignupViewController: UIViewController {
         designLabel.textAlignment = .center
         designLabel.anchor(top: snipLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 5, left: 100, bottom: 0, right: -100))
     }
+    
+    func setUpLoginBtn(){
+        view.addSubview(loginBtn)
+        loginBtn.setTitle("Login", for: .normal)
+        loginBtn.setTitleColor(.black, for: .normal)
+        loginBtn.anchor(top: designLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 40, left: 100, bottom: 0, right: -100))
+    }
 
-
+    func setUpSignupBtn(){
+        view.addSubview(signupBtn)
+        signupBtn.setTitle("Sign Up", for: .normal)
+        signupBtn.setTitleColor(.black, for: .normal)
+        signupBtn.anchor(top: loginBtn.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 8, left: 100, bottom: 0, right: -100))
+    }
 }
 
 extension UIView {
