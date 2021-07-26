@@ -21,6 +21,7 @@ class LoginSignupViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9764325023, green: 0.9686483741, blue: 0.9970936179, alpha: 1)
         setUpimgView()
         setUpSnipLabel()
+        setUpDesignLabel()
     }
     
     func setUpimgView(){
@@ -35,6 +36,12 @@ class LoginSignupViewController: UIViewController {
         snipLabel.text = "S n i p"
         snipLabel.textAlignment = .center
         snipLabel.anchor(top: imgView.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 8, left: 100, bottom: 0, right: -100))
+    }
+    func setUpDesignLabel(){
+        view.addSubview(designLabel)
+        designLabel.text = "Design Sustainably"
+        designLabel.textAlignment = .center
+        designLabel.anchor(top: snipLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 5, left: 100, bottom: 0, right: -100))
     }
 
 
