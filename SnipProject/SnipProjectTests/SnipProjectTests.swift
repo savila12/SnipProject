@@ -2,7 +2,7 @@
 //  SnipProjectTests.swift
 //  SnipProjectTests
 //
-//  Created by Matthew Hernandez on 7/26/21.
+//  Created by Sidney Avila on 7/26/21.
 //
 
 import XCTest
