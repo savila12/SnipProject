@@ -99,12 +99,10 @@
 		01DFD9C526AEFF3C00D905A1 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
-				01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */,
-				01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */,
-				01DFD9CA26AEFF3C00D905A1 /* ViewController.swift */,
-				01DFD9CC26AEFF3C00D905A1 /* Main.storyboard */,
-				01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */,
-				01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */,
+				01DFD9F926AF010B00D905A1 /* SupportedFiles */,
+				01DFD9F826AF00FC00D905A1 /* Views */,
+				01DFD9F726AF00F300D905A1 /* ViewModels */,
+				01DFD9F626AF00E900D905A1 /* Models */,
 				01DFD9D426AEFF4100D905A1 /* Info.plist */,
 			);
 			path = SnipProject;
@@ -126,6 +124,56 @@
 				01DFD9EA26AEFF4200D905A1 /* Info.plist */,
 			);
 			path = SnipProjectUITests;
+			sourceTree = "<group>";
+		};
+		01DFD9F626AF00E900D905A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01DFD9F726AF00F300D905A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		01DFD9F826AF00FC00D905A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01DFD9FB26AF014000D905A1 /* Storyboard */,
+				01DFD9FA26AF013800D905A1 /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01DFD9F926AF010B00D905A1 /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */,
+				01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */,
+				01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */,
+				01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+		01DFD9FA26AF013800D905A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01DFD9CA26AEFF3C00D905A1 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01DFD9FB26AF014000D905A1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				01DFD9CC26AEFF3C00D905A1 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
