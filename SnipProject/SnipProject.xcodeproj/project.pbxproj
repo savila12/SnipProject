@@ -15,6 +15,8 @@
 		01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */; };
 		01DFD9E926AEFF4200D905A1 /* SnipProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9E826AEFF4200D905A1 /* SnipProjectUITests.swift */; };
 		01DFDA5D26AF961700D905A1 /* LoginSignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */; };
+		01DFDA5F26AFA3A500D905A1 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */; };
+		01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		01DFD9E826AEFF4200D905A1 /* SnipProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipProjectUITests.swift; sourceTree = "<group>"; };
 		01DFD9EA26AEFF4200D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewControllerTest.swift; sourceTree = "<group>"; };
+		01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				01DFD9DF26AEFF4200D905A1 /* Info.plist */,
 				01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */,
+				01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */,
 			);
 			path = SnipProjectTests;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */,
+				01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */,
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
 				01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */,
@@ -325,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DFDA5F26AFA3A500D905A1 /* LoginViewControllerTests.swift in Sources */,
 				01DFDA5D26AF961700D905A1 /* LoginSignUpViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

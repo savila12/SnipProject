@@ -24,6 +24,21 @@
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="93.75"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="DdK-jM-CE8">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BuH-OO-JKe" customClass="LoginViewController" customModule="SnipProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OeE-25-afM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jHo-Zz-atR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcS-mH-ZoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="94"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mF9-kw-btR">
             <objects>
