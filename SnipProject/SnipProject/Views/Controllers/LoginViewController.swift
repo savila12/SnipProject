@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let navBarTitle = UINavigationItem()
     let loginLabel = UILabel()
     let usernameTxtField = UITextField()
     let passwordTxtField = UITextField()
@@ -19,6 +20,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    
         setUpLoginLabel()
         setUpUsername()
         setUpPassword()
@@ -34,7 +36,7 @@ class LoginViewController: UIViewController {
     
     func setUpUsername() {
         view.addSubview(usernameTxtField)
-        usernameTxtField.placeholder = " Username"
+        usernameTxtField.placeholder = " Email"
         usernameTxtField.anchor(top: loginLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 50, left: 50, bottom: 0, right: -50))
     }
     
@@ -49,6 +51,7 @@ class LoginViewController: UIViewController {
         loginBtn.setTitle("Login", for: .normal)
         loginBtn.setTitleColor(.black, for: .normal)
         loginBtn.anchor(top: passwordTxtField.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 20, left: 100, bottom: 0, right: -100))
+        
     }
 
 }

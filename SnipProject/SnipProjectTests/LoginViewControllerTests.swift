@@ -21,6 +21,12 @@ class LoginViewControllerTests: XCTestCase {
         st = nil
         vc = nil
     }
+    
+//    func test_should_show_title_in_navbar(){
+//        let nbTitle = vc?.navBarTitle.title
+//        
+//        XCTAssertEqual(nbTitle, "Login")
+//    }
 
     func test_should_show_Login_text() {
         
@@ -31,7 +37,7 @@ class LoginViewControllerTests: XCTestCase {
         
         let placeholder = vc?.usernameTxtField.placeholder
         
-        XCTAssertEqual(" Username", placeholder)
+        XCTAssertEqual(" Email", placeholder)
     }
     
     func test_should_show_password_placeholder(){
@@ -45,5 +51,6 @@ class LoginViewControllerTests: XCTestCase {
         
         XCTAssertEqual("Login", btnText)
     }
+    
 
 }

@@ -14,6 +14,8 @@ class LoginSignupViewController: UIViewController {
     let designLabel = UILabel()
     let signupBtn = UIButton()
     let loginBtn = UIButton()
+    
+    let st = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,13 +54,25 @@ class LoginSignupViewController: UIViewController {
     func setUpLoginBtn(){
         loginBtn.setTitle("Login", for: .normal)
         loginBtn.setTitleColor(.black, for: .normal)
+        loginBtn.addTarget(self, action: #selector(goTologinBtn), for: .touchUpInside)
         loginBtn.anchor(top: designLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 80, left: 100, bottom: 0, right: -100))
     }
 
     func setUpSignupBtn(){
         signupBtn.setTitle("Sign Up", for: .normal)
         signupBtn.setTitleColor(.black, for: .normal)
+        signupBtn.addTarget(self, action: #selector(goToSignup), for: .touchUpInside)
         signupBtn.anchor(top: loginBtn.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 8, left: 100, bottom: 0, right: -100))
+    }
+    
+    @objc func goTologinBtn(){
+        let vc = st.instantiateViewController(identifier: "LoginViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func goToSignup() {
+        let vc = st.instantiateViewController(identifier: "SignupViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
