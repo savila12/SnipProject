@@ -13,8 +13,8 @@
 		01DFD9CE26AEFF3C00D905A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9CC26AEFF3C00D905A1 /* Main.storyboard */; };
 		01DFD9D026AEFF4100D905A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */; };
 		01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */; };
-		01DFD9DE26AEFF4200D905A1 /* SnipProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9DD26AEFF4200D905A1 /* SnipProjectTests.swift */; };
 		01DFD9E926AEFF4200D905A1 /* SnipProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9E826AEFF4200D905A1 /* SnipProjectUITests.swift */; };
+		01DFDA5D26AF961700D905A1 /* LoginSignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +44,11 @@
 		01DFD9D226AEFF4100D905A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01DFD9D426AEFF4100D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01DFD9D926AEFF4200D905A1 /* SnipProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		01DFD9DD26AEFF4200D905A1 /* SnipProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipProjectTests.swift; sourceTree = "<group>"; };
 		01DFD9DF26AEFF4200D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01DFD9E426AEFF4200D905A1 /* SnipProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DFD9E826AEFF4200D905A1 /* SnipProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipProjectUITests.swift; sourceTree = "<group>"; };
 		01DFD9EA26AEFF4200D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +112,8 @@
 		01DFD9DC26AEFF4200D905A1 /* SnipProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				01DFD9DD26AEFF4200D905A1 /* SnipProjectTests.swift */,
 				01DFD9DF26AEFF4200D905A1 /* Info.plist */,
+				01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */,
 			);
 			path = SnipProjectTests;
 			sourceTree = "<group>";
@@ -254,6 +254,7 @@
 					};
 					01DFD9D826AEFF4200D905A1 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 01DFD9C226AEFF3C00D905A1;
 					};
 					01DFD9E326AEFF4200D905A1 = {
@@ -324,7 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DFD9DE26AEFF4200D905A1 /* SnipProjectTests.swift in Sources */,
+				01DFDA5D26AF961700D905A1 /* LoginSignUpViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +529,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SnipProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -538,6 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnipProject.app/SnipProject";
@@ -549,6 +552,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SnipProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

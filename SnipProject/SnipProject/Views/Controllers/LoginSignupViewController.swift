@@ -36,12 +36,14 @@ class LoginSignupViewController: UIViewController {
     func setUpSnipLabel(){
         view.addSubview(snipLabel)
         snipLabel.text = "S n i p"
+        //snipLabel.font.withSize()
         snipLabel.textAlignment = .center
         snipLabel.anchor(top: imgView.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 8, left: 100, bottom: 0, right: -100))
     }
     func setUpDesignLabel(){
         view.addSubview(designLabel)
         designLabel.text = "Design Sustainably"
+        designLabel.font = UIFont(name: "Savoye LET", size: 35)
         designLabel.textAlignment = .center
         designLabel.anchor(top: snipLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 5, left: 100, bottom: 0, right: -100))
     }
@@ -50,7 +52,7 @@ class LoginSignupViewController: UIViewController {
         view.addSubview(loginBtn)
         loginBtn.setTitle("Login", for: .normal)
         loginBtn.setTitleColor(.black, for: .normal)
-        loginBtn.anchor(top: designLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 40, left: 100, bottom: 0, right: -100))
+        loginBtn.anchor(top: designLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 80, left: 100, bottom: 0, right: -100))
     }
 
     func setUpSignupBtn(){
