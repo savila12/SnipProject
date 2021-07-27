@@ -19,6 +19,7 @@ class LoginViewControllerTests: XCTestCase {
 
     override func tearDownWithError() throws {
         st = nil
+        vc = nil
     }
 
     func test_should_show_Login_text() {
@@ -34,9 +35,15 @@ class LoginViewControllerTests: XCTestCase {
     }
     
     func test_should_show_password_placeholder(){
-        let placeholder = vc.passwordTxtField.placeholder
+        let placeholder = vc?.passwordTxtField.placeholder
         
         XCTAssertEqual(" Password", placeholder)
+    }
+    
+    func test_should_show_loginBtn() {
+        let btnText = vc?.loginBtn.titleLabel?.text
+        
+        XCTAssertEqual("Login", btnText)
     }
 
 }
