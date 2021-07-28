@@ -83,7 +83,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(signupBtn)
         signupBtn.setTitle("Create Account", for: .normal)
         signupBtn.setTitleColor(.black, for: .normal)
-        signupBtn.addTarget(self, action: #selector(goToGenerView), for: .touchUpInside)
+        signupBtn.addTarget(self, action: #selector(goToGenderView), for: .touchUpInside)
         
         signupBtn.backgroundColor = #colorLiteral(red: 0.877602809, green: 0.8508373205, blue: 1, alpha: 1)
         signupBtn.layer.cornerRadius = 25
@@ -113,7 +113,7 @@ class SignUpViewController: UIViewController {
         
     }
     
-    @objc func goToGenerView(){
+    @objc func goToGenderView(){
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(identifier: "GenderViewController")
         

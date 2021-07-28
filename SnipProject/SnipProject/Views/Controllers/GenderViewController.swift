@@ -18,7 +18,9 @@ class GenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100)
+        self.title = "How old are you?"
+        
         setUpLabel()
         setUpAgeTxt()
         setUpGenderLabel()
@@ -39,9 +41,13 @@ class GenderViewController: UIViewController {
     
     func setUpAgeTxt() {
         view.addSubview(ageTxt)
-        ageTxt.placeholder = " Input Age"
+        ageTxt.backgroundColor = #colorLiteral(red: 0.2128325701, green: 0.337071836, blue: 0.5774024725, alpha: 1)
+        ageTxt.attributedPlaceholder = NSAttributedString(string: "Age", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        ageTxt.textAlignment = .center
         
-        ageTxt.anchor(top: label.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 80, left: 100, bottom: 0, right: -100))
+        ageTxt.layer.cornerRadius = 25
+        
+        ageTxt.anchor(top: label.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 80, left: 100, bottom: 0, right: -100), size: .init(width: 0, height: 50))
     }
     
     func setUpGenderLabel() {
@@ -54,9 +60,13 @@ class GenderViewController: UIViewController {
     
     func setUpGenderTxt() {
         view.addSubview(genderTxt)
-        genderTxt.placeholder = "  Gender  "
+        genderTxt.backgroundColor = #colorLiteral(red: 0.2128325701, green: 0.337071836, blue: 0.5774024725, alpha: 1)
+        genderTxt.attributedPlaceholder = NSAttributedString(string: "INPUT GENDER", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        genderTxt.textAlignment = .center
         
-        genderTxt.anchor(top: genderLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 60, left: 50, bottom: 0, right: -50))
+        genderTxt.layer.cornerRadius = 25
+        
+        genderTxt.anchor(top: genderLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 60, left: 50, bottom: 0, right: -50), size: .init(width: 0, height: 50))
     }
     
     func setUpOrLabel() {
@@ -77,6 +87,7 @@ class GenderViewController: UIViewController {
     
     func setUpLeftBtnInNav(){
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "<", style: .plain, target: self, action: #selector(goBack))
+        
     }
     
     @objc func goBack() {
