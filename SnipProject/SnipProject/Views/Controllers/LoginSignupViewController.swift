@@ -55,14 +55,26 @@ class LoginSignupViewController: UIViewController {
         loginBtn.setTitle("Login", for: .normal)
         loginBtn.setTitleColor(.black, for: .normal)
         loginBtn.addTarget(self, action: #selector(goTologinBtn), for: .touchUpInside)
-        loginBtn.anchor(top: designLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 80, left: 100, bottom: 0, right: -100))
+        
+        loginBtn.backgroundColor = #colorLiteral(red: 0.877602809, green: 0.8508373205, blue: 1, alpha: 1)
+        loginBtn.layer.cornerRadius = 25
+        //loginBtn.layer.borderWidth = 1
+        loginBtn.layer.borderColor = UIColor.black.cgColor
+        
+        loginBtn.anchor(top: designLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 80, left: 100, bottom: 0, right: -100), size: .init(width: 0, height: 50))
     }
 
     func setUpSignupBtn(){
         signupBtn.setTitle("Sign Up", for: .normal)
         signupBtn.setTitleColor(.black, for: .normal)
         signupBtn.addTarget(self, action: #selector(goToSignup), for: .touchUpInside)
-        signupBtn.anchor(top: loginBtn.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 8, left: 100, bottom: 0, right: -100))
+        
+        signupBtn.backgroundColor = .clear
+        signupBtn.layer.cornerRadius = 25
+        signupBtn.layer.borderWidth = 1
+        signupBtn.layer.borderColor = UIColor.black.cgColor
+        
+        signupBtn.anchor(top: loginBtn.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 15, left: 100, bottom: 0, right: -100), size: .init(width: 0, height: 50))
     }
     
     @objc func goTologinBtn(){

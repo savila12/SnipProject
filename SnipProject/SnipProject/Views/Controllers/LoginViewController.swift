@@ -9,7 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    let navBarTitle = UINavigationItem()
     let loginLabel = UILabel()
     let usernameTxtField = UITextField()
     let passwordTxtField = UITextField()
@@ -20,7 +19,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    
+
+        
         setUpLoginLabel()
         setUpUsername()
         setUpPassword()

@@ -18,6 +18,7 @@
 		01DFDA5F26AFA3A500D905A1 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */; };
 		01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */; };
 		01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */; };
+		01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */,
 				01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */,
 				01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */,
+				01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */,
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
+				01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */,
 				01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */,
 				01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */,
 			);
