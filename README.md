@@ -4,7 +4,7 @@ About Application:
 
 Technologies Used:
 
-Desing Patterns:
+Desing Patterns: MVVM
 
 Screen Shots:
 
