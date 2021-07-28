@@ -1,6 +1,6 @@
 # SnipProject
 
-About Application:
+About Application: User can customize clothing of their choosing as well as by and sell articles of clothing.
 
 Technologies Used:
 
