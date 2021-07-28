@@ -19,6 +19,7 @@
 		01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */; };
 		01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */; };
 		01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */; };
+		01DFDAA726B1A1EE00D905A1 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA626B1A1EE00D905A1 /* GenderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		01DFDAA626B1A1EE00D905A1 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		01DFD9F726AF00F300D905A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				01DFDAA626B1A1EE00D905A1 /* GenderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DFDAA726B1A1EE00D905A1 /* GenderViewModel.swift in Sources */,
 				01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */,
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,

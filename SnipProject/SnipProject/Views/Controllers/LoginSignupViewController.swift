@@ -89,6 +89,13 @@ class LoginSignupViewController: UIViewController {
 }
 
 extension UIView {
+    
+    func borderBottom(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero){
+        backgroundColor = UIColor.lightGray
+        
+        anchor(top: top, leading: leading, bottom: bottom, trailing: trailing, padding: padding, size: size)
+        
+    }
     func anchor (top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero){
         translatesAutoresizingMaskIntoConstraints = false
         if let top = top{
