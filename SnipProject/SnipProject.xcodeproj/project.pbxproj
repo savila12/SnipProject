@@ -13,23 +13,19 @@
 		01DFD9CE26AEFF3C00D905A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9CC26AEFF3C00D905A1 /* Main.storyboard */; };
 		01DFD9D026AEFF4100D905A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */; };
 		01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DFD9D126AEFF4100D905A1 /* LaunchScreen.storyboard */; };
-		01DFDA5D26AF961700D905A1 /* LoginSignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */; };
-		01DFDA5F26AFA3A500D905A1 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */; };
 		01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */; };
 		01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */; };
 		01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */; };
-		01DFDAA726B1A1EE00D905A1 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAA626B1A1EE00D905A1 /* GenderViewModel.swift */; };
+		01DFDAB726B2370300D905A1 /* UserModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAB626B2370300D905A1 /* UserModelTest.swift */; };
+		01DFDABF26B2D8A600D905A1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDABE26B2D8A600D905A1 /* UserModel.swift */; };
+		01DFDAC126B2DB8900D905A1 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDAC026B2DB8900D905A1 /* UserViewModel.swift */; };
+		01E2B33E26B30E7000C7A504 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */; };
+		01E2B33F26B30E7300C7A504 /* LoginSignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */; };
+		01E2B34126B32A4200C7A504 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34026B32A4200C7A504 /* UserViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01DFD9DA26AEFF4200D905A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01DFD9BB26AEFF3C00D905A1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 01DFD9C226AEFF3C00D905A1;
-			remoteInfo = SnipProject;
-		};
-		01DFD9E526AEFF4200D905A1 /* PBXContainerItemProxy */ = {
+		01DFDAB926B2370300D905A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01DFD9BB26AEFF3C00D905A1 /* Project object */;
 			proxyType = 1;
@@ -47,16 +43,17 @@
 		01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01DFD9D226AEFF4100D905A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01DFD9D426AEFF4100D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01DFD9D926AEFF4200D905A1 /* SnipProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		01DFD9DF26AEFF4200D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01DFD9E426AEFF4200D905A1 /* SnipProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		01DFD9EA26AEFF4200D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewControllerTest.swift; sourceTree = "<group>"; };
 		01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
-		01DFDAA626B1A1EE00D905A1 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
+		01DFDAB426B2370300D905A1 /* SnipProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DFDAB626B2370300D905A1 /* UserModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTest.swift; sourceTree = "<group>"; };
+		01DFDAB826B2370300D905A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01DFDABE26B2D8A600D905A1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		01DFDAC026B2DB8900D905A1 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		01E2B34026B32A4200C7A504 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,14 +64,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01DFD9D626AEFF4200D905A1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01DFD9E126AEFF4200D905A1 /* Frameworks */ = {
+		01DFDAB126B2370300D905A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,8 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				01DFD9C526AEFF3C00D905A1 /* SnipProject */,
-				01DFD9DC26AEFF4200D905A1 /* SnipProjectTests */,
-				01DFD9E726AEFF4200D905A1 /* SnipProjectUITests */,
+				01DFDAB526B2370300D905A1 /* SnipProjectTests */,
 				01DFD9C426AEFF3C00D905A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				01DFD9C326AEFF3C00D905A1 /* SnipProject.app */,
-				01DFD9D926AEFF4200D905A1 /* SnipProjectTests.xctest */,
-				01DFD9E426AEFF4200D905A1 /* SnipProjectUITests.xctest */,
+				01DFDAB426B2370300D905A1 /* SnipProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,37 +95,20 @@
 		01DFD9C526AEFF3C00D905A1 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
+				01DFD9D426AEFF4100D905A1 /* Info.plist */,
 				01DFD9FC26AF036B00D905A1 /* APIManager */,
 				01DFD9F926AF010B00D905A1 /* SupportedFiles */,
 				01DFD9F826AF00FC00D905A1 /* Views */,
 				01DFD9F726AF00F300D905A1 /* ViewModels */,
 				01DFD9F626AF00E900D905A1 /* Models */,
-				01DFD9D426AEFF4100D905A1 /* Info.plist */,
 			);
 			path = SnipProject;
-			sourceTree = "<group>";
-		};
-		01DFD9DC26AEFF4200D905A1 /* SnipProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				01DFD9DF26AEFF4200D905A1 /* Info.plist */,
-			);
-			path = SnipProjectTests;
-			sourceTree = "<group>";
-		};
-		01DFD9E726AEFF4200D905A1 /* SnipProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */,
-				01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */,
-				01DFD9EA26AEFF4200D905A1 /* Info.plist */,
-			);
-			path = SnipProjectUITests;
 			sourceTree = "<group>";
 		};
 		01DFD9F626AF00E900D905A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01DFDABE26B2D8A600D905A1 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,7 +116,7 @@
 		01DFD9F726AF00F300D905A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				01DFDAA626B1A1EE00D905A1 /* GenderViewModel.swift */,
+				01DFDAC026B2DB8900D905A1 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -196,6 +167,18 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
+		01DFDAB526B2370300D905A1 /* SnipProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				01DFDAB626B2370300D905A1 /* UserModelTest.swift */,
+				01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */,
+				01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */,
+				01DFDAB826B2370300D905A1 /* Info.plist */,
+				01E2B34026B32A4200C7A504 /* UserViewModelTests.swift */,
+			);
+			path = SnipProjectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,41 +199,23 @@
 			productReference = 01DFD9C326AEFF3C00D905A1 /* SnipProject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01DFD9D826AEFF4200D905A1 /* SnipProjectTests */ = {
+		01DFDAB326B2370300D905A1 /* SnipProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01DFD9F026AEFF4200D905A1 /* Build configuration list for PBXNativeTarget "SnipProjectTests" */;
+			buildConfigurationList = 01DFDABB26B2370300D905A1 /* Build configuration list for PBXNativeTarget "SnipProjectTests" */;
 			buildPhases = (
-				01DFD9D526AEFF4200D905A1 /* Sources */,
-				01DFD9D626AEFF4200D905A1 /* Frameworks */,
-				01DFD9D726AEFF4200D905A1 /* Resources */,
+				01DFDAB026B2370300D905A1 /* Sources */,
+				01DFDAB126B2370300D905A1 /* Frameworks */,
+				01DFDAB226B2370300D905A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				01DFD9DB26AEFF4200D905A1 /* PBXTargetDependency */,
+				01DFDABA26B2370300D905A1 /* PBXTargetDependency */,
 			);
 			name = SnipProjectTests;
 			productName = SnipProjectTests;
-			productReference = 01DFD9D926AEFF4200D905A1 /* SnipProjectTests.xctest */;
+			productReference = 01DFDAB426B2370300D905A1 /* SnipProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		01DFD9E326AEFF4200D905A1 /* SnipProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01DFD9F326AEFF4200D905A1 /* Build configuration list for PBXNativeTarget "SnipProjectUITests" */;
-			buildPhases = (
-				01DFD9E026AEFF4200D905A1 /* Sources */,
-				01DFD9E126AEFF4200D905A1 /* Frameworks */,
-				01DFD9E226AEFF4200D905A1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				01DFD9E626AEFF4200D905A1 /* PBXTargetDependency */,
-			);
-			name = SnipProjectUITests;
-			productName = SnipProjectUITests;
-			productReference = 01DFD9E426AEFF4200D905A1 /* SnipProjectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -264,12 +229,7 @@
 					01DFD9C226AEFF3C00D905A1 = {
 						CreatedOnToolsVersion = 12.5;
 					};
-					01DFD9D826AEFF4200D905A1 = {
-						CreatedOnToolsVersion = 12.5;
-						LastSwiftMigration = 1250;
-						TestTargetID = 01DFD9C226AEFF3C00D905A1;
-					};
-					01DFD9E326AEFF4200D905A1 = {
+					01DFDAB326B2370300D905A1 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 01DFD9C226AEFF3C00D905A1;
 					};
@@ -289,8 +249,7 @@
 			projectRoot = "";
 			targets = (
 				01DFD9C226AEFF3C00D905A1 /* SnipProject */,
-				01DFD9D826AEFF4200D905A1 /* SnipProjectTests */,
-				01DFD9E326AEFF4200D905A1 /* SnipProjectUITests */,
+				01DFDAB326B2370300D905A1 /* SnipProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,14 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01DFD9D726AEFF4200D905A1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01DFD9E226AEFF4200D905A1 /* Resources */ = {
+		01DFDAB226B2370300D905A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,44 +279,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DFDAA726B1A1EE00D905A1 /* GenderViewModel.swift in Sources */,
 				01DFDA6126AFA4A000D905A1 /* LoginViewController.swift in Sources */,
+				01DFDAC126B2DB8900D905A1 /* UserViewModel.swift in Sources */,
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
 				01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */,
 				01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */,
+				01DFDABF26B2D8A600D905A1 /* UserModel.swift in Sources */,
 				01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		01DFD9D526AEFF4200D905A1 /* Sources */ = {
+		01DFDAB026B2370300D905A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DFDA5F26AFA3A500D905A1 /* LoginViewControllerTests.swift in Sources */,
-				01DFDA5D26AF961700D905A1 /* LoginSignUpViewControllerTest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		01DFD9E026AEFF4200D905A1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				01E2B33E26B30E7000C7A504 /* LoginViewControllerTests.swift in Sources */,
+				01E2B34126B32A4200C7A504 /* UserViewModelTests.swift in Sources */,
+				01E2B33F26B30E7300C7A504 /* LoginSignUpViewControllerTest.swift in Sources */,
+				01DFDAB726B2370300D905A1 /* UserModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01DFD9DB26AEFF4200D905A1 /* PBXTargetDependency */ = {
+		01DFDABA26B2370300D905A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 01DFD9C226AEFF3C00D905A1 /* SnipProject */;
-			targetProxy = 01DFD9DA26AEFF4200D905A1 /* PBXContainerItemProxy */;
-		};
-		01DFD9E626AEFF4200D905A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 01DFD9C226AEFF3C00D905A1 /* SnipProject */;
-			targetProxy = 01DFD9E526AEFF4200D905A1 /* PBXContainerItemProxy */;
+			targetProxy = 01DFDAB926B2370300D905A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -540,38 +483,12 @@
 			};
 			name = Release;
 		};
-		01DFD9F126AEFF4200D905A1 /* Debug */ = {
+		01DFDABC26B2370300D905A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SnipProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnipProject.app/SnipProject";
-			};
-			name = Debug;
-		};
-		01DFD9F226AEFF4200D905A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SnipProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,43 +500,24 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnipProject.app/SnipProject";
 			};
-			name = Release;
-		};
-		01DFD9F426AEFF4200D905A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SnipProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SnipProject;
-			};
 			name = Debug;
 		};
-		01DFD9F526AEFF4200D905A1 /* Release */ = {
+		01DFDABD26B2370300D905A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SnipProjectUITests/Info.plist;
+				INFOPLIST_FILE = SnipProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SnipProject;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnipProject.app/SnipProject";
 			};
 			name = Release;
 		};
@@ -644,20 +542,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01DFD9F026AEFF4200D905A1 /* Build configuration list for PBXNativeTarget "SnipProjectTests" */ = {
+		01DFDABB26B2370300D905A1 /* Build configuration list for PBXNativeTarget "SnipProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01DFD9F126AEFF4200D905A1 /* Debug */,
-				01DFD9F226AEFF4200D905A1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		01DFD9F326AEFF4200D905A1 /* Build configuration list for PBXNativeTarget "SnipProjectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01DFD9F426AEFF4200D905A1 /* Debug */,
-				01DFD9F526AEFF4200D905A1 /* Release */,
+				01DFDABC26B2370300D905A1 /* Debug */,
+				01DFDABD26B2370300D905A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

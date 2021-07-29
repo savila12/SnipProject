@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     let loginLabel = UILabel()
     let usernameTxtField = UITextField()
     let passwordTxtField = UITextField()
@@ -16,15 +16,16 @@ class LoginViewController: UIViewController {
     let orLabel = UILabel()
     let faceBootBtn = UIButton()
     
+    var vm: UserViewModel?
+    var delegate: LoginViewControllerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        vm = UserViewModel()
+        vm?.delegate = self
+        
         // Do any additional setup after loading the view.
         self.title = "Login"
-        
-        
-        
         setUpUsername()
         setUpPassword()
         setUpOrLabel()
@@ -32,7 +33,6 @@ class LoginViewController: UIViewController {
         
         setUpLeftBtnInNav()
     }
-    
     
     func setUpUsername() {
         let borderBtm = UIView()
@@ -60,7 +60,6 @@ class LoginViewController: UIViewController {
         borderBtm.borderBottom(top: passwordTxtField.bottomAnchor, leading: passwordTxtField.leadingAnchor, bottom: nil, trailing: passwordTxtField.trailingAnchor, padding: .init(top: 1, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 1))
     }
     
-    
     func setUpOrLabel(){
         view.addSubview(orLabel)
         orLabel.text = "or"
@@ -83,4 +82,22 @@ class LoginViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "<", style: .plain, target: self, action: nil)
     }
 
+}
+
+extension LoginViewController: UITextFieldDelegate, UserViewModelProtocol {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        sendValue(emailTextField: usernameTxtField.text, passwordTextField: passwordTxtField.text)
+        return true
+    }
+    
+    func sendValue(emailTextField: String?, passwordTextField: String?) {
+        guard let emailTextField = emailTextField else {return}
+        guard let passwordTextField = passwordTextField else {return}
+        delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
+    }
+}
+
+protocol LoginViewControllerProtocol {
+    func sendInfoBack(email: String?, password: String?)
 }
