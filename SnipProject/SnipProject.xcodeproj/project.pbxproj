@@ -22,6 +22,13 @@
 		01E2B33E26B30E7000C7A504 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5E26AFA3A500D905A1 /* LoginViewControllerTests.swift */; };
 		01E2B33F26B30E7300C7A504 /* LoginSignUpViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFDA5C26AF961700D905A1 /* LoginSignUpViewControllerTest.swift */; };
 		01E2B34126B32A4200C7A504 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34026B32A4200C7A504 /* UserViewModelTests.swift */; };
+		01E2B34426B352EB00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E2B34326B352EA00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png */; };
+		01E2B34626B3909C00C7A504 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34526B3909C00C7A504 /* TabBarController.swift */; };
+		01E2B34926B3913D00C7A504 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34826B3913D00C7A504 /* HomeViewController.swift */; };
+		01E2B34B26B3915900C7A504 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34A26B3915900C7A504 /* ExplorerViewController.swift */; };
+		01E2B34D26B3917900C7A504 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34C26B3917900C7A504 /* ShareViewController.swift */; };
+		01E2B34F26B3918600C7A504 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B34E26B3918600C7A504 /* SavedViewController.swift */; };
+		01E2B35126B391A100C7A504 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2B35026B391A100C7A504 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,14 @@
 		01DFDABE26B2D8A600D905A1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		01DFDAC026B2DB8900D905A1 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		01E2B34026B32A4200C7A504 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		01E2B34226B3479A00C7A504 /* SnipProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnipProject.entitlements; sourceTree = "<group>"; };
+		01E2B34326B352EA00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2021-06-25 at 3.03.07 PM.png"; path = "SupportedFiles/Assets.xcassets/SnipLogo.imageset/Screen Shot 2021-06-25 at 3.03.07 PM.png"; sourceTree = "<group>"; };
+		01E2B34526B3909C00C7A504 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		01E2B34826B3913D00C7A504 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		01E2B34A26B3915900C7A504 /* ExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		01E2B34C26B3917900C7A504 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		01E2B34E26B3918600C7A504 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		01E2B35026B391A100C7A504 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +110,9 @@
 		01DFD9C526AEFF3C00D905A1 /* SnipProject */ = {
 			isa = PBXGroup;
 			children = (
+				01E2B34226B3479A00C7A504 /* SnipProject.entitlements */,
 				01DFD9D426AEFF4100D905A1 /* Info.plist */,
+				01E2B34326B352EA00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png */,
 				01DFD9FC26AF036B00D905A1 /* APIManager */,
 				01DFD9F926AF010B00D905A1 /* SupportedFiles */,
 				01DFD9F826AF00FC00D905A1 /* Views */,
@@ -143,6 +160,7 @@
 		01DFD9FA26AF013800D905A1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				01E2B34726B3911200C7A504 /* TabBarControllers */,
 				01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */,
 				01DFDA6026AFA4A000D905A1 /* LoginViewController.swift */,
 				01DFDAA026B0AE5700D905A1 /* SignUpViewController.swift */,
@@ -177,6 +195,19 @@
 				01E2B34026B32A4200C7A504 /* UserViewModelTests.swift */,
 			);
 			path = SnipProjectTests;
+			sourceTree = "<group>";
+		};
+		01E2B34726B3911200C7A504 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01E2B34526B3909C00C7A504 /* TabBarController.swift */,
+				01E2B34826B3913D00C7A504 /* HomeViewController.swift */,
+				01E2B34A26B3915900C7A504 /* ExplorerViewController.swift */,
+				01E2B34C26B3917900C7A504 /* ShareViewController.swift */,
+				01E2B34E26B3918600C7A504 /* SavedViewController.swift */,
+				01E2B35026B391A100C7A504 /* ProfileViewController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E2B34426B352EB00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png in Resources */,
 				01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */,
 				01DFD9D026AEFF4100D905A1 /* Assets.xcassets in Resources */,
 				01DFD9CE26AEFF3C00D905A1 /* Main.storyboard in Resources */,
@@ -283,9 +315,15 @@
 				01DFDAC126B2DB8900D905A1 /* UserViewModel.swift in Sources */,
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
+				01E2B35126B391A100C7A504 /* ProfileViewController.swift in Sources */,
 				01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */,
+				01E2B34926B3913D00C7A504 /* HomeViewController.swift in Sources */,
+				01E2B34D26B3917900C7A504 /* ShareViewController.swift in Sources */,
 				01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */,
 				01DFDABF26B2D8A600D905A1 /* UserModel.swift in Sources */,
+				01E2B34B26B3915900C7A504 /* ExplorerViewController.swift in Sources */,
+				01E2B34F26B3918600C7A504 /* SavedViewController.swift in Sources */,
+				01E2B34626B3909C00C7A504 /* TabBarController.swift in Sources */,
 				01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +490,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SnipProject/SnipProject.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = SnipProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,6 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = devProvisioningProfileSidneyA;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,7 +512,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = SnipProject/SnipProject.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RQAE768Z9N;
 				INFOPLIST_FILE = SnipProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,6 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSdev.batch29.SnipProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = devProvisioningProfileSidneyA;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

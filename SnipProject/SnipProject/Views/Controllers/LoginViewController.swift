@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     let usernameTxtField = UITextField()
     let passwordTxtField = UITextField()
     let loginBtn = UIButton()
+    let validateLabel = UILabel()
     let orLabel = UILabel()
     let faceBootBtn = UIButton()
     
@@ -23,15 +24,24 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         vm = UserViewModel()
         vm?.delegate = self
-        
+        usernameTxtField.delegate = self
+        passwordTxtField.delegate = self
         // Do any additional setup after loading the view.
         self.title = "Login"
+        setUpValidateLabel()
         setUpUsername()
         setUpPassword()
+        
         setUpOrLabel()
         setUpFaceBookBtn()
         
         setUpLeftBtnInNav()
+    }
+    
+    func setUpValidateLabel(){
+        view.addSubview(validateLabel)
+        validateLabel.textColor = UIColor.red
+        validateLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 190, left: 50, bottom: 0, right: -50))
     }
     
     func setUpUsername() {
@@ -42,7 +52,7 @@ class LoginViewController: UIViewController {
         
         usernameTxtField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         
-        usernameTxtField.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 200, left: 50, bottom: 0, right: -50))
+        usernameTxtField.anchor(top: validateLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 8, left: 50, bottom: 0, right: -50))
         
         borderBtm.borderBottom(top: usernameTxtField.bottomAnchor, leading: usernameTxtField.leadingAnchor, bottom: nil, trailing: usernameTxtField.trailingAnchor, padding: .init(top: 1, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 1))
     }
@@ -59,6 +69,7 @@ class LoginViewController: UIViewController {
         
         borderBtm.borderBottom(top: passwordTxtField.bottomAnchor, leading: passwordTxtField.leadingAnchor, bottom: nil, trailing: passwordTxtField.trailingAnchor, padding: .init(top: 1, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 1))
     }
+    
     
     func setUpOrLabel(){
         view.addSubview(orLabel)
@@ -79,25 +90,45 @@ class LoginViewController: UIViewController {
     }
     
     func setUpLeftBtnInNav(){
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "<", style: .plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "<", style: .plain, target: self, action: #selector(backToRoot))
+        
+    }
+    @objc func backToRoot(){
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }
 
 extension LoginViewController: UITextFieldDelegate, UserViewModelProtocol {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         sendValue(emailTextField: usernameTxtField.text, passwordTextField: passwordTxtField.text)
         return true
     }
     
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+        
+    }
+    
     func sendValue(emailTextField: String?, passwordTextField: String?) {
         guard let emailTextField = emailTextField else {return}
         guard let passwordTextField = passwordTextField else {return}
-        delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
+        
+        
+       let isValid = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
+        
+        
+        if let isValid = isValid {
+            if isValid == false {
+                validateLabel.text = "User must input email and or password"
+            }
+        }
+       
     }
 }
 
 protocol LoginViewControllerProtocol {
-    func sendInfoBack(email: String?, password: String?)
+    func sendInfoBack(email: String?, password: String?) -> Bool?
 }

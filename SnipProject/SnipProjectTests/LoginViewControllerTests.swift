@@ -42,5 +42,4 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual("Facebook", btnText)
     }
     
-
 }
