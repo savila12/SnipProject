@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class LoginSignupViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class LoginSignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().delegate = self
         // Do any additional setup after loading the view.
         view.backgroundColor = #colorLiteral(red: 0.9764325023, green: 0.9686483741, blue: 0.9970936179, alpha: 1)
         
@@ -85,6 +87,13 @@ class LoginSignupViewController: UIViewController {
     @objc func goToSignup() {
         let vc = st.instantiateViewController(identifier: "SignupViewController")
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension LoginSignupViewController: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print(notification.request.content.body)
+        completionHandler([.alert, .sound])
     }
 }
 

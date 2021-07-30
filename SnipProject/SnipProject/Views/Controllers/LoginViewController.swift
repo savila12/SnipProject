@@ -113,22 +113,37 @@ extension LoginViewController: UITextFieldDelegate, UserViewModelProtocol {
     }
     
     func sendValue(emailTextField: String?, passwordTextField: String?) {
+        
         guard let emailTextField = emailTextField else {return}
         guard let passwordTextField = passwordTextField else {return}
         
+        let result = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
+            
+        self.validateLabel.text = result ?? ""
         
-       let isValid = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
         
         
-        if let isValid = isValid {
-            if isValid == false {
-                validateLabel.text = "User must input email and or password"
-            }
-        }
-       
+        
+//        if let isValid = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField) {
+//            if isValid == false {
+//                print(isValid)
+//                self.validateLabel.text = "User must input email and or password"
+//            }
+//        }
+        
+        
+//        let isValid = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
+        // print(isValid)
+        
+        //guard let isValid = isValid else {return}
+        
+//        if isValid == false {
+//            print(isValid ?? "")
+//            validateLabel.text = "User must input email and or password"
+//        }
     }
 }
 
 protocol LoginViewControllerProtocol {
-    func sendInfoBack(email: String?, password: String?) -> Bool?
+    func sendInfoBack(email: String?, password: String?) -> String
 }
