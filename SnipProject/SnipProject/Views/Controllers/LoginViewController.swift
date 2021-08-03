@@ -119,28 +119,7 @@ extension LoginViewController: UITextFieldDelegate, UserViewModelProtocol {
         
         let result = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
             
-        self.validateLabel.text = result ?? ""
-        
-        
-        
-        
-//        if let isValid = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField) {
-//            if isValid == false {
-//                print(isValid)
-//                self.validateLabel.text = "User must input email and or password"
-//            }
-//        }
-        
-        
-//        let isValid = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
-        // print(isValid)
-        
-        //guard let isValid = isValid else {return}
-        
-//        if isValid == false {
-//            print(isValid ?? "")
-//            validateLabel.text = "User must input email and or password"
-//        }
+        self.validateLabel.text = result ?? "all clear"
     }
 }
 

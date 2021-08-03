@@ -8,11 +8,18 @@
 import Foundation
 
 class UserViewModel {
+    
     var delegate: UserViewModelProtocol?
     var user: User?
+    let loginVC = LoginViewController()
+    
+    init() {
+        loginVC.delegate = self
+    }
 }
 
 extension UserViewModel: LoginViewControllerProtocol {
+    
     func sendInfoBack(email: String?, password: String?) -> String {
         //let emailRegEx = "[A-Z0-9a-z._%+-]+\\.[A-Za-Z]{2,64}"
         

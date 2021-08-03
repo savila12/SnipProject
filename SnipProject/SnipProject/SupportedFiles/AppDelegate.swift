@@ -11,17 +11,29 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let notificationDelegate = Notification()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+       let center =  UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound, .badge]) {
         (granted, error) in
+                
         guard granted else { return }
+                
         DispatchQueue.main.async {
         UIApplication.shared.registerForRemoteNotifications()
         }
         }
+        
+        center.delegate = notificationDelegate
+        let openAction = UNNotificationAction(identifier: "OpenNotification", title: NSLocalizedString("Open", comment: ""), options: UNNotificationActionOptions.foreground)
+                let deafultCategory = UNNotificationCategory(identifier: "CustomSamplePush", actions: [openAction], intentIdentifiers: [], options: [])
+                center.setNotificationCategories(Set([deafultCategory]))
+        
+//        UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+//            UIApplication.shared.registerForRemoteNotifications()
         return true
     }
 
@@ -51,9 +63,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     print("Bundle ID: \(token) \(bundleID)");
     // 3. Save the token to local storeage and post to app server to generate Push Notification. ...
     }
+    
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
     print("failed to register for remote notifications: \(error.localizedDescription)")
     }
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
     print("Received push notification: \(userInfo)")
     let aps = userInfo["aps"] as! [String: Any]

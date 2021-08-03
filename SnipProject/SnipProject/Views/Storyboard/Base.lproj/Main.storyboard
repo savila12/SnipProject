@@ -70,6 +70,21 @@
             </objects>
             <point key="canvasLocation" x="2877" y="94"/>
         </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="IS6-tn-LZc">
+            <objects>
+                <viewController storyboardIdentifier="DIYPickerViewController" id="4TU-YD-v1o" customClass="DIYPickerViewController" customModule="SnipProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecY-Mb-aRf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fTz-1E-5Kd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5G-RB-Klb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3881" y="94"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sX1-mK-vyt">
             <objects>

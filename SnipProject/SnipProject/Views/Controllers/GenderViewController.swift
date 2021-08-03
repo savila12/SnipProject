@@ -83,6 +83,8 @@ class GenderViewController: UIViewController {
         skipBtn.setTitleColor(.blue, for: .normal)
         
         skipBtn.anchor(top: orLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 60, left: 100, bottom: 0, right: -100))
+        
+        skipBtn.addTarget(self, action: #selector(skip), for: .touchUpInside)
     }
     
     func setUpLeftBtnInNav(){
@@ -92,6 +94,12 @@ class GenderViewController: UIViewController {
     
     @objc func goBack() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func skip(){
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "DIYPickerViewController")
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
