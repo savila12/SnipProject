@@ -21,6 +21,8 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         delegate = self
         
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         homeVC = st.instantiateViewController(identifier: "HomeViewController") as? HomeViewController
         explorterVC = st.instantiateViewController(identifier: "ExplorerViewController") as? ExplorerViewController
         shareVC = st.instantiateViewController(identifier: "ShareViewController") as? ShareViewController
