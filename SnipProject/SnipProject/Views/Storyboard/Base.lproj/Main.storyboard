@@ -83,12 +83,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5G-RB-Klb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881" y="94"/>
+            <point key="canvasLocation" x="3507" y="94"/>
+        </scene>
+        <!--Experience View Controller-->
+        <scene sceneID="1v7-06-8py">
+            <objects>
+                <viewController storyboardIdentifier="ExperienceViewController" id="Ek3-ND-a2n" customClass="ExperienceViewController" customModule="SnipProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yhr-xR-3jG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Y6-Jc-5Gb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p39-Ca-SuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4149" y="94"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sX1-mK-vyt">
             <objects>
-                <viewController id="zTn-3a-J8y" customClass="TabBarController" customModule="SnipProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TabBarController" id="zTn-3a-J8y" customClass="TabBarController" customModule="SnipProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="juf-vT-bir">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
