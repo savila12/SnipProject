@@ -11,10 +11,11 @@ class ShareViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let logo = UIImage(named: "SnipLogo")
+        let imgView = UIImageView(image: logo)
+        self.navigationItem.titleView = imgView
 
-        self.title = "Share"
     }
-    
-
 
 }

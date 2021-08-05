@@ -1,0 +1,6 @@
+framework module Pods_SnipProject {
+  umbrella header "Pods-SnipProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

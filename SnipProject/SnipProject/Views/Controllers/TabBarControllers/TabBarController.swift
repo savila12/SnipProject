@@ -35,9 +35,16 @@ class TabBarController: UITabBarController {
     
     func setUpTabBar(){
         let homeIcon = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
+        
         let explorerIcon = UITabBarItem(title: "Explorer", image: UIImage(systemName: "globe"), selectedImage: nil)
-        let shareIcon = UITabBarItem(title: "Share", image: UIImage(named: "SnipLogo"), selectedImage: nil)
+        
+        let shareIcon = UITabBarItem(title: "Share", image: UIImage(named: "SnipLogoTabBar"), selectedImage: nil)
+        shareIcon.image?.withRenderingMode(.alwaysOriginal)
+        shareIcon.selectedImage?.withRenderingMode(.alwaysOriginal)
+        shareIcon.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        
         let savedIcon = UITabBarItem(title: "Saved", image: UIImage(systemName: "briefcase"), selectedImage: nil)
+        
         let profileIcon = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: nil)
         
         homeVC?.tabBarItem = homeIcon

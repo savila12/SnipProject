@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     let faceBootBtn = UIButton()
     
     var vm: UserViewModel?
-    var delegate: LoginViewControllerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,14 +114,21 @@ extension LoginViewController: UITextFieldDelegate, UserViewModelProtocol {
     func sendValue(emailTextField: String?, passwordTextField: String?) {
         
         guard let emailTextField = emailTextField else {return}
+        
         guard let passwordTextField = passwordTextField else {return}
         
-        let result = delegate?.sendInfoBack(email: emailTextField, password: passwordTextField)
-            
-        self.validateLabel.text = result ?? "all clear"
+        
+        if emailTextField == "" || passwordTextField == "" {
+            validateLabel.text = "User must input email and password"
+        }
+        
+        if emailTextField.count <= 10 && passwordTextField.count < 8 {
+            validateLabel.text = "Email must contain more than 10 characters"
+        } else {
+            validateLabel.text = ""
+        }
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController
+        
+        navigationController?.pushViewController(vc!, animated: true)
     }
-}
-
-protocol LoginViewControllerProtocol {
-    func sendInfoBack(email: String?, password: String?) -> String
 }
