@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
+    let ref = Database.database().reference().root
     let firstName = UITextField()
     let lastName = UITextField()
     let email = UITextField()
@@ -117,7 +119,66 @@ class SignUpViewController: UIViewController {
         let st = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = st.instantiateViewController(identifier: "GenderViewController")
         
-        navigationController?.pushViewController(vc, animated: true)
+        let error = validateFields()
+        
+        if error != nil {
+            showError(error!)
+        } else {
+            let firstName = firstName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Auth.auth().createUser(withEmail: email, password: password) { result, err in
+                if err != nil
+                {
+                    self.showError("Error creating user")
+                    
+                } else {
+                    
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]) { (error) in
+                        
+                        if error != nil {
+                            print("Error saving user data")
+                        }
+                    }
+                    
+//                    self.transitionToHome()
+                    navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        }
+    }
+    
+    /// TODO - Put these functions in the View Model
+    func validateFields() -> String? {
+        if firstName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            lastName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill in all fields"
+        }
+        
+        let cleanPassword = password.text!
+        
+        if isPasswordValid(cleanPassword) == false {
+            return "Please make sure your password is at least 8 haracters, contains a special character and number"
+        }
+        
+        return nil
+    }
+    
+    func isPasswordValid (_ password: String) -> Bool {
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$!%*?&]{8,}")
+        return passwordTest.evaluate(with: password)
+    }
+    
+    func showError(_ message: String) {
+//                errorLabel.text = message
+//                errorLabel.alpha = 1
     }
 
 

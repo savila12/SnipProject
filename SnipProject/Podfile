@@ -25,6 +25,7 @@ target 'SnipProject' do
   # https://firebase.google.com/docs/ios/setup#available-pods
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   # Pods for SnipProject
 

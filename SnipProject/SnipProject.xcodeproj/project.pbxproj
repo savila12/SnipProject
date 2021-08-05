@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		017A877B26BC1F8E00971C01 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info-3.plist */; };
-		017A877C26BC1F8E00971C01 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info-3.plist */; };
-		017A877D26BC1F8F00971C01 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info-3.plist */; };
-		017A877E26BC1F8F00971C01 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info-3.plist */; };
+		017A877B26BC1F8E00971C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */; };
+		017A877C26BC1F8E00971C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */; };
+		017A877D26BC1F8F00971C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */; };
+		017A877E26BC1F8F00971C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */; };
+		01C934FB26BC519D00FFE250 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C934FA26BC519D00FFE250 /* LoadingViewController.swift */; };
 		01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */; };
 		01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */; };
 		01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */; };
@@ -93,7 +94,8 @@
 		00D7568B45D6F915ECC9A911 /* Pods_SnipProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnipProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01177A6726B98053009DF721 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		01177A6926B98053009DF721 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
-		017A877A26BC1F8E00971C01 /* GoogleService-Info-3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-3.plist"; sourceTree = "<group>"; };
+		017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		01C934FA26BC519D00FFE250 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		01DFD9C326AEFF3C00D905A1 /* SnipProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,7 +227,7 @@
 				01E2B34226B3479A00C7A504 /* SnipProject.entitlements */,
 				01DFD9D426AEFF4100D905A1 /* Info.plist */,
 				01E2B34326B352EA00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png */,
-				017A877A26BC1F8E00971C01 /* GoogleService-Info-3.plist */,
+				017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */,
 				01DFD9FC26AF036B00D905A1 /* APIManager */,
 				01DFD9F926AF010B00D905A1 /* SupportedFiles */,
 				01DFD9F826AF00FC00D905A1 /* Views */,
@@ -279,6 +281,7 @@
 				01DFDAA226B0B6A400D905A1 /* GenderViewController.swift */,
 				01E2B35226B4969700C7A504 /* DIYPickerViewController.swift */,
 				01E2B35426B496B500C7A504 /* ExperienceViewController.swift */,
+				01C934FA26BC519D00FFE250 /* LoadingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				01DFD9C026AEFF3C00D905A1 /* Frameworks */,
 				01DFD9C126AEFF3C00D905A1 /* Resources */,
 				01177A4126B8E187009DF721 /* Embed App Extensions */,
+				F47F21E410A11B21D05671D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,7 +504,7 @@
 				01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */,
 				01DFD9D026AEFF4100D905A1 /* Assets.xcassets in Resources */,
 				01DFD9CE26AEFF3C00D905A1 /* Main.storyboard in Resources */,
-				017A877B26BC1F8E00971C01 /* GoogleService-Info-3.plist in Resources */,
+				017A877B26BC1F8E00971C01 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017A877C26BC1F8E00971C01 /* GoogleService-Info-3.plist in Resources */,
+				017A877C26BC1F8E00971C01 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01ECCE5526B992360052470F /* MainInterface.storyboard in Resources */,
-				017A877D26BC1F8F00971C01 /* GoogleService-Info-3.plist in Resources */,
+				017A877D26BC1F8F00971C01 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017A877E26BC1F8F00971C01 /* GoogleService-Info-3.plist in Resources */,
+				017A877E26BC1F8F00971C01 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +624,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F47F21E410A11B21D05671D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnipProject/Pods-SnipProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnipProject/Pods-SnipProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnipProject/Pods-SnipProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -632,6 +653,7 @@
 				01DFDAC126B2DB8900D905A1 /* UserViewModel.swift in Sources */,
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
+				01C934FB26BC519D00FFE250 /* LoadingViewController.swift in Sources */,
 				01E2B35126B391A100C7A504 /* ProfileViewController.swift in Sources */,
 				01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */,
 				01E2B34926B3913D00C7A504 /* HomeViewController.swift in Sources */,

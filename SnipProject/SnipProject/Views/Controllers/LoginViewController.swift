@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
+    let ref = Database.database().reference().root
     let loginLabel = UILabel()
     let usernameTxtField = UITextField()
     let passwordTxtField = UITextField()
