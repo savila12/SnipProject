@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  SnipProject
 //
-//  Created by Matthew Hernandez on 7/27/21.
+//  Created by Sidney Avila on 7/27/21.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import Firebase
 
 class SignUpViewController: UIViewController {
 
-    let ref = Database.database().reference().root
+    var ref: DatabaseReference?
     let firstName = UITextField()
     let lastName = UITextField()
     let email = UITextField()
@@ -18,15 +18,21 @@ class SignUpViewController: UIViewController {
     let signupBtn = UIButton()
     let orLabel = UILabel()
     let facebookBtn = UIButton()
+    let errorLabel = UILabel()
+    var profileImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
         self.title = "Sign up"
+        
+        profileImage = UIImage(named: "avatarFemale")
         
         setUpFirstName()
         setUpLastName()
         setUpEmail()
         setUpPassword()
+        setUpErrorLabel()
         setUpSignupBtn()
         setUpOrLabel()
         setUpFaceBookBtn()
@@ -81,6 +87,14 @@ class SignUpViewController: UIViewController {
         borderBtm.borderBottom(top: password.bottomAnchor, leading: password.leadingAnchor, bottom: nil, trailing: password.trailingAnchor, padding: .init(top: 1, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 1))
     }
     
+    func setUpErrorLabel() {
+        view.addSubview(errorLabel)
+        errorLabel.numberOfLines = 0
+        errorLabel.textColor = UIColor.red
+        
+        errorLabel.anchor(top: password.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 5, left: 20, bottom: 0, right: -20))
+    }
+    
     func setUpSignupBtn(){
         view.addSubview(signupBtn)
         signupBtn.setTitle("Create Account", for: .normal)
@@ -92,7 +106,7 @@ class SignUpViewController: UIViewController {
         //loginBtn.layer.borderWidth = 1
         signupBtn.layer.borderColor = UIColor.black.cgColor
         
-        signupBtn.anchor(top: password.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 60, left: 60, bottom: 0, right: -60), size: .init(width: 0, height: 50))
+        signupBtn.anchor(top: errorLabel.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 60, left: 60, bottom: 0, right: -60), size: .init(width: 0, height: 50))
     }
     
     func setUpOrLabel(){
@@ -136,17 +150,20 @@ class SignUpViewController: UIViewController {
                     
                 } else {
                     
-                    let db = Firestore.firestore()
+                    /// Firebase Realtime Database
+                    self.ref?.child("users").child((result?.user.uid)!).setValue(["firstname": firstName, "lastname": lastName, "email": email, "password": password, "uid": result?.user.uid])
                     
-                    db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]) { (error) in
-                        
-                        if error != nil {
-                            print("Error saving user data")
-                        }
-                    }
+                    /// FireBase Cloud Database
                     
-//                    self.transitionToHome()
-                    navigationController?.pushViewController(vc, animated: true)
+//                    let db = Firestore.firestore()
+//
+//                    db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]) { (error) in
+//
+//                        if error != nil {
+//                            print("Error saving user data")
+//                        }
+//                    }
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
         }
@@ -165,7 +182,7 @@ class SignUpViewController: UIViewController {
         let cleanPassword = password.text!
         
         if isPasswordValid(cleanPassword) == false {
-            return "Please make sure your password is at least 8 haracters, contains a special character and number"
+            return "Please make sure your password is at least 8 characters, contains a special character and number"
         }
         
         return nil
@@ -177,8 +194,7 @@ class SignUpViewController: UIViewController {
     }
     
     func showError(_ message: String) {
-//                errorLabel.text = message
-//                errorLabel.alpha = 1
+        errorLabel.text = message
     }
 
 

@@ -12,6 +12,9 @@
 		017A877D26BC1F8F00971C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */; };
 		017A877E26BC1F8F00971C01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */; };
 		01C934FB26BC519D00FFE250 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C934FA26BC519D00FFE250 /* LoadingViewController.swift */; };
+		01C9352826BCD5C900FFE250 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9352726BCD5C900FFE250 /* Constants.swift */; };
+		01C9352D26BDA92E00FFE250 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C9352C26BDA92E00FFE250 /* CustomTableViewCell.xib */; };
+		01C9353026BDBE0300FFE250 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9352F26BDBE0300FFE250 /* CustomTableViewCell.swift */; };
 		01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */; };
 		01DFD9C926AEFF3C00D905A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */; };
 		01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFD9CA26AEFF3C00D905A1 /* LoginSignupViewController.swift */; };
@@ -96,6 +99,9 @@
 		01177A6926B98053009DF721 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		017A877A26BC1F8E00971C01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01C934FA26BC519D00FFE250 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		01C9352726BCD5C900FFE250 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		01C9352C26BDA92E00FFE250 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		01C9352F26BDBE0300FFE250 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		01DFD9C326AEFF3C00D905A1 /* SnipProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +202,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		01C9352926BDA82C00FFE250 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				01C9352C26BDA92E00FFE250 /* CustomTableViewCell.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		01C9352E26BDBDCB00FFE250 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				01C9352F26BDBE0300FFE250 /* CustomTableViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		01DFD9BA26AEFF3C00D905A1 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +253,7 @@
 				01DFD9FC26AF036B00D905A1 /* APIManager */,
 				01DFD9F926AF010B00D905A1 /* SupportedFiles */,
 				01DFD9F826AF00FC00D905A1 /* Views */,
+				01DFD9F726AF00F300D905A1 /* ViewModels */,
 				01DFD9F626AF00E900D905A1 /* Models */,
 			);
 			path = SnipProject;
@@ -255,6 +278,8 @@
 		01DFD9F826AF00FC00D905A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01C9352E26BDBDCB00FFE250 /* CustomViews */,
+				01C9352926BDA82C00FFE250 /* XIB */,
 				01DFD9FB26AF014000D905A1 /* Storyboard */,
 				01DFD9FA26AF013800D905A1 /* Controllers */,
 			);
@@ -267,6 +292,7 @@
 				01DFD9CF26AEFF4100D905A1 /* Assets.xcassets */,
 				01DFD9C626AEFF3C00D905A1 /* AppDelegate.swift */,
 				01DFD9C826AEFF3C00D905A1 /* SceneDelegate.swift */,
+				01C9352726BCD5C900FFE250 /* Constants.swift */,
 			);
 			path = SupportedFiles;
 			sourceTree = "<group>";
@@ -298,7 +324,6 @@
 		01DFD9FC26AF036B00D905A1 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
-				01DFD9F726AF00F300D905A1 /* ViewModels */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -502,6 +527,7 @@
 			files = (
 				01E2B34426B352EB00C7A504 /* Screen Shot 2021-06-25 at 3.03.07 PM.png in Resources */,
 				01DFD9D326AEFF4100D905A1 /* LaunchScreen.storyboard in Resources */,
+				01C9352D26BDA92E00FFE250 /* CustomTableViewCell.xib in Resources */,
 				01DFD9D026AEFF4100D905A1 /* Assets.xcassets in Resources */,
 				01DFD9CE26AEFF3C00D905A1 /* Main.storyboard in Resources */,
 				017A877B26BC1F8E00971C01 /* GoogleService-Info.plist in Resources */,
@@ -654,6 +680,7 @@
 				01DFD9CB26AEFF3C00D905A1 /* LoginSignupViewController.swift in Sources */,
 				01DFD9C726AEFF3C00D905A1 /* AppDelegate.swift in Sources */,
 				01C934FB26BC519D00FFE250 /* LoadingViewController.swift in Sources */,
+				01C9353026BDBE0300FFE250 /* CustomTableViewCell.swift in Sources */,
 				01E2B35126B391A100C7A504 /* ProfileViewController.swift in Sources */,
 				01DFDAA326B0B6A400D905A1 /* GenderViewController.swift in Sources */,
 				01E2B34926B3913D00C7A504 /* HomeViewController.swift in Sources */,
@@ -665,6 +692,7 @@
 				01E2B34F26B3918600C7A504 /* SavedViewController.swift in Sources */,
 				01E2B34626B3909C00C7A504 /* TabBarController.swift in Sources */,
 				01DFDAA126B0AE5700D905A1 /* SignUpViewController.swift in Sources */,
+				01C9352826BCD5C900FFE250 /* Constants.swift in Sources */,
 				01E2B3AE26B8875800C7A504 /* Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

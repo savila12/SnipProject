@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 class UserViewModel {
     
@@ -13,12 +14,15 @@ class UserViewModel {
     var user: User?
     let loginVC = LoginViewController()
     
-    func validateEmail(email: String?) -> String? {
+    func validateLoginFields(email: String?, password: String?) -> String? {
+        
+        if email?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            password?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "Please fill in empty fields"
+        }
+        
         return nil
-    }
-    
-    func  validatePassword(password: String?) -> String? {
-        return nil
+        
     }
 }
 

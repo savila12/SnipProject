@@ -113,24 +113,39 @@ extension LoginViewController: UITextFieldDelegate, UserViewModelProtocol {
         
     }
     
+    func showError(_ message: String) {
+        validateLabel.text = message
+    }
+    
     func sendValue(emailTextField: String?, passwordTextField: String?) {
         
-        guard let emailTextField = emailTextField else {return}
+        guard let email = emailTextField else {return}
+        guard let password = passwordTextField else {return}
         
-        guard let passwordTextField = passwordTextField else {return}
+        let error = vm?.validateLoginFields(email: email, password: password)
         
-        
-        if emailTextField == "" || passwordTextField == "" {
-            validateLabel.text = "User must input email and password"
+        if error != nil {
+            showError("Invalid email or password")
         }
-        
-        if emailTextField.count <= 10 && passwordTextField.count < 8 {
-            validateLabel.text = "Email must contain more than 10 characters"
-        } else {
-            validateLabel.text = ""
-        }
-        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController
-        
-        navigationController?.pushViewController(vc!, animated: true)
+        self.authenticateUser(email, password)
     }
+    
+    func authenticateUser(_ email: String?, _ password: String?) {
+        
+        guard let email = email?.trimmingCharacters(in: .whitespacesAndNewlines) else {return}
+        guard let password = password?.trimmingCharacters(in: .whitespacesAndNewlines) else {return}
+        
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            
+            if error != nil {
+                self.validateLabel.text = error?.localizedDescription
+            } else {
+                print(result ?? "")
+                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController
+                self.navigationController?.pushViewController(vc!, animated: true)
+            }
+        }
+    }
+    
+
 }

@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         delegate = self
         
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        //navigationController?.setNavigationBarHidden(true, animated: true)
         
         homeVC = st.instantiateViewController(identifier: "HomeViewController") as? HomeViewController
         explorterVC = st.instantiateViewController(identifier: "ExplorerViewController") as? ExplorerViewController
@@ -33,6 +33,7 @@ class TabBarController: UITabBarController {
             ProfileViewController
         
         setUpTabBar()
+        logoutUser()
     }
     
     func setUpTabBar(){
@@ -62,6 +63,15 @@ class TabBarController: UITabBarController {
 }
 
 extension TabBarController: UITabBarControllerDelegate {
+    
+    func logoutUser(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "logout", style: .plain, target: self, action: #selector(handleLogout))
+    }
+    
+    @objc func handleLogout(){
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         return true
     }

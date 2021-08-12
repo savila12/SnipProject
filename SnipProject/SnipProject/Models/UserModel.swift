@@ -6,13 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
-struct User {
-    
-    let firstName: String?
-    let lastName: String?
-    let email: String?
-    let userName: String?
-    let password: String?
-    
+class User: NSObject {
+    @objc var email: String?
+    @objc var firstname: String?
+    @objc var lastname: String?
+    @objc var password: String?
+    @objc var uid: String?
 }
